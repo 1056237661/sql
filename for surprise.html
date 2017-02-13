@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>my demo</title>
+	<style type="text/css">
+		*{margin:0; padding: 0;}
+		body{background:pink;}
+		/*头部*/
+		header{width: 900px;height: 100px;background:rgba(0,0,0,0.2) url(img/bg4.jpeg);margin:0 auto;border-radius: 2rem;overflow: hidden;}
+		header span:nth-child(1){line-height:100px;float: left;width: 300px;height: 100px;font:bold italic 6rem arial;-webkit-text-fill-color:red;-webkit-text-stroke:2px yellow;text-shadow: 6px 5px 2px yellow;text-shadow: 10px 10px 2px red;letter-spacing: 1.5rem;margin-left: 2rem;} 
+		header span img{width: 120px;height: 100px;opacity: 0.9;} 
+		header span:nth-child(2){width: 120px;height: 100px;float: left;margin-left:50px;display: none;}
+		header span:nth-child(3){float: right;margin-right: 100px;width: 120px;height: 100px;-webkit-animation: roll 5s infinite ease;}
+		header span:nth-child(3) img{border-radius: 20px;}
+		@-webkit-keyframes roll{ 
+			0%{-webkit-transform: rotateY(45deg);}
+			50%{-webkit-transform: rotateY(180deg);} 
+			100%{-webkit-transform: rotateY(360deg);}
+		}
+		.wrap{background:hotpink;background:url(img/bg3.jpeg);background-size:cover;width: 1000px;margin: 0 auto;}
+		/*头部动画部分*/
+		.div1 span img{width: 120px;height: 200px;}
+		.div1 span:nth-child(1){float: left;}
+		.div1{position: relative;height: 200px;overflow: hidden;}
+		.div1 span:nth-child(2){float: right;}
+		.div1 span:nth-child(3){position: absolute;left:440px;display: none;} 
+		/*画廊*/
+		.div2{position:relative;overflow: hidden;height: 435px;background:rgba(0,0,0,0.2) no-repeat url(img/bg2.jpg);background-size:cover;}  
+		.div2 img{width: 60px;height: 100px;float: left;margin-left:18px;-webkit-transform-origin: left top;-webkit-transform: rotate(10deg);-webkit-transition: all 1s ease;}
+		.div2 img:nth-child(1){-webkit-transform: rotate(15deg);} 
+		.div2 img:nth-child(2n){-webkit-transform: rotate(-15deg);}
+		.div2 img:nth-child(3n){-webkit-transform: rotate(35deg);}
+		.div2 img:nth-child(4n){-webkit-transform: rotate(-25deg);}  
+		.div2 img:hover{position: relative;z-index: 100;-webkit-transform: rotate(0deg) scale(2.5);}
+		.div3{margin:90px;}
+		/*右侧轮播*/
+		aside .container span{width:200px ;height: 350px;float: left;text-align: center;}
+		aside .container span img{width:180px ;height: 320px;margin-top: 15px;}
+		aside{height: 350px;overflow: hidden;}
+		aside .container{width: 6000px;height: 350px;-webkit-animation:swimg 25s linear infinite normal;}
+		/*第一页部分*/
+		.div0 span{width: 380px; height: 100px; position: absolute; left:35%;top: 800px;font: bold italic 38px "arial rounded mt bold";
+		-webkit-text-fill-color: rgba(255,0,0,0.8);-webkit-text-stroke:1px mediumvioletred;text-shadow:5px 5px 2px yellow;word-spacing: 10px;}  
+		/*页脚*/
+		footer{height: 50px;}
+		footer span{float:left;width:200px;margin-left: 400px;margin-top:25px;font: 12px "微软雅黑";color: rgba(0,0,0,0.6);}
+		 @-webkit-keyframes swimg{
+			 0% {margin-left: 0px;}
+			 5% {margin-left: 0px;}
+			 
+			 15% {margin-left: -1000px;}
+			 25% {margin-left: -1000px;}
+			 
+			 35% {margin-left: -2000px;}
+			 45% {margin-left: -2000px;}
+			 
+			 55% {margin-left: -3000px;}
+			 65% {margin-left: -3000px;}
+			 
+			 75% {margin-left: -4000px;}
+			 85% {margin-left: -4000px;}
+			 
+			 95% {margin-left: -5000px;}
+			 100% {margin-left: -5000px;} 
+			 
+		}
+	</style>
+</head>
+<body>  
+<div class="wrap">
+	<!--
+    	 第一页
+    -->
+	<div class="div0 wrap"> 
+			 	<canvas class="canvas wrap"></canvas>
+			 	<span>Surprise for Binbin</span>
+	</div> 
+	<!--/*头部*/-->
+	<header>
+		 <span>love</span>
+		 <span><img src="img/bg1.png"/></span>
+		 <span><img src="img/fz.jpeg"/></span>
+	</header>
+	<!--/*头部动画*/-->
+	<div class="div1 wrap"> 
+		<span><img src="img/me.jpeg"/></span>
+		<span><img src="img/you.jpeg"/></span>
+		<span><img src="img/us.jpeg"/></span>
+	</div>
+	<!--/*画廊*/-->
+	<div class="div2 wrap"> 
+		<div class="div3"> 
+			<img src="img/h1.jpeg"/>
+			<img src="img/h2.jpeg"/>
+			<img src="img/h3.jpeg"/>
+			
+			<img src="img/h4.jpeg"/>
+			<img src="img/h5.jpeg"/>
+			<img src="img/h6.jpeg"/>
+			
+			<img src="img/h7.jpeg"/>
+			<img src="img/h8.jpg"/>
+			<img src="img/h9.jpg"/>
+			
+			<img src="img/h10.jpg"/>
+			<img src="img/h11.jpg"/>
+			<img src="img/h12.jpg"/>
+			
+			<img src="img/h13.jpeg"/>
+			<img src="img/h14.jpeg"/>
+			<img src="img/h15.jpeg"/>
+			
+			<img src="img/h16.jpeg"/>
+			<img src="img/h17.jpg"/>
+			<img src="img/h18.jpg"/>
+		</div>
+	</div>  
+	 <!--
+     	轮播
+     -->
+			<aside class="wrap">
+				<div class="container wrap"> 
+					<span><img src="img/default0.jpeg"/></span>
+					<span><img src="img/default (1).jpeg"/></span>
+					<span><img src="img/default (2).jpeg"/></span>
+					<span><img src="img/default (3).jpeg"/></span>
+					<span><img src="img/default (4).jpeg"/></span>
+					
+					<span><img src="img/default (5).jpeg"/></span>
+					<span><img src="img/default (6).jpeg"/></span>
+					<span><img src="img/default (7).jpeg"/></span>
+					<span><img src="img/default (8).jpeg"/></span>
+					<span><img src="img/default (9).jpeg"/></span>
+					
+					<span><img src="img/default (10).jpeg"/></span>
+					<span><img src="img/default (11).jpeg"/></span>
+					<span><img src="img/default (12).jpeg"/></span>
+					<span><img src="img/default (13).jpeg"/></span>
+					<span><img src="img/default (14).jpeg"/></span>
+					
+					<span><img src="img/default 22.jpeg"/></span>
+					<span><img src="img/default 23.jpeg"/></span>
+					<span><img src="img/default 24.jpeg"/></span>
+					<span><img src="img/default 25.jpeg"/></span>
+					<span><img src="img/default 26.jpeg"/></span>
+					
+					<span><img src="img/default (15).jpeg"/></span>
+					<span><img src="img/default (16).jpeg"/></span>
+					<span><img src="img/default (17).jpeg"/></span>
+					<span><img src="img/IMG_19.jpg"/></span>
+					<span><img src="img/h18.jpg"/></span> 
+					
+					<span><img src="img/default0.jpeg"/></span>
+					<span><img src="img/default (1).jpeg"/></span>
+					<span><img src="img/default (2).jpeg"/></span>
+					<span><img src="img/default (3).jpeg"/></span>
+					<span><img src="img/default (4).jpeg"/></span> 
+				</div>
+			</aside>  
+			<footer class="wrap">
+				<audio src="http://sc1.111ttt.com/2016/1/11/28/204281919253.mp3" loop="loop" autoplay="autoplay"></audio>
+				<span>Author: she qiuluo     &copy 2017.2.14</span>
+			</footer>
+</div>
+	<script type="text/javascript">
+		/*顶部动画*/
+		function show1(){
+			var ome = document.querySelector('.div1 span:nth-child(1)');
+			var oyou = document.querySelector('.div1 span:nth-child(2)');
+			var ous = document.querySelector('.div1 span:nth-child(3)');
+			var orose = document.querySelector('header span:nth-child(2)');
+			var num = 0;
+			var timer1;
+			function move1(){
+				num++;  
+				ome.style.marginLeft = num+'px';
+				oyou.style.marginRight = num+'px';
+				ome.style.display = 'block';
+				oyou.style.display = 'block';
+				if(num == 380){
+					num = 0;
+					ous.style.display = 'block';
+					orose.style.display = 'block'; 
+					ome.style.display = 'none';
+					oyou.style.display = 'none'; 
+					clearInterval(timer1);
+					var timer2 = setTimeout(function(){
+						ous.style.display = 'none'; 
+						orose.style.display = 'none';
+						timer1= setInterval(move1,12);
+					},3000);
+				}
+			}
+			 timer1= setInterval(move1,12);
+		} 
+			show1(); 
+		/*画廊*/
+		function  show2(){
+			var oimg = document.querySelector('.div2 img'); 
+		}
+		/*canvas 动画*/
+		function show3(){
+			var c = document.getElementsByTagName('canvas')[0];
+			var b = document.body;
+			var a = c.getContext('2d'); 
+			var M = Math,
+	n = M.pow,
+	i, E = 2,
+	F = "rgba(233,61,109,",
+	d = M.cos,
+	z = M.sin,
+	L = 1,
+	u = 30,
+	W = window,
+	w = c.width = W.innerWidth,
+	h = c.height = W.innerHeight,
+	r = function() {
+	    return M.random() * 2 - 1
+	},
+	y = "px Arial",
+	v = "♥",
+	X = w / 2,
+	Y = h / 2,
+	T = 4,
+	p = function() {
+	    var e = this;
+	    e.g = function() {
+	        e.x = X;
+	        e.y = Y;
+	        e.k = 0;
+	        e.l = 0;
+	        e.t = M.random() * 19000;
+	        e.c = e.t
+	    };
+	    e.d = function() {
+	        a.fillStyle = F + (e.c / e.t) + ")";
+	        a.fillText(v, e.x, e.y);
+	        e.c -= 50;
+	        e.x += e.k;
+	        e.y += e.l;
+	        e.k = e.k + r();
+	        e.l = e.l + r();
+	        if (e.c < 0 || e.x > w || e.x < 0 || e.y > h || e.y < 0) {
+	            e.g()
+	        }
+	    };
+	    e.g()
+	},
+	A,
+	B;
+	a.textAlign = "center";
+	a.strokeStyle = "#000";
+	a.lineWidth = 2;
+	for (i = 0; i < 350; i++) {
+	    M[i] = new p()
+	}
+	setInterval(function() {
+	    a.clearRect(0, 0, w, h);
+	    a.font = u + y;
+	    X = (w / 6 * n(z(T), 3) + w / 2);
+	    Y = 0.8 * ( - h / 40 * (13 * d(T) - 5 * d(2 * T) - 2 * d(3 * T) - d(4 * T)) + h / 2.3);
+	    T += (z(T) + 3) / 99;
+	    for (i = 0; i < 350; i++) {
+	        with(M[i]) {
+	            A = (x / w - 0.5) * 2,
+	            B = -(y / h - 0.5);
+	            if (L && (A * A + 2 * n((B - 0.5 * n(M.abs(A), 0.5)), 2)) > 0.11) {
+	                k = l = 0
+	            }
+	            d()
+	        }
+	    }
+	    a.font = 50 + y;
+	    if (E > 0.1) {
+	        if (E < 1) {
+	            a.fillStyle = F + E + ")";
+	            a.fillText("click on me", w / 2, h / 2 *1.7);
+	        	E += 0.015;
+	        }
+	        E -= 0.02;
+	    }
+	    a.fillStyle = "#E93D6D";
+	    a.fillText(v, X, Y + u);
+	    a.strokeText(v, X, Y + u)
+	},
+	50);
+//	b.bgColor = "#FFEFF2";
+	b.bgColor = "#FFF";
+	c.onmouseup = function() {
+	    L = (L) ? 0 : 1
+	}
+} 
+		show3(); 
+		/*第一部分*/
+		function show4(){
+			var odiv0 = document.querySelector('.div0');
+			var height = screen.height;
+			odiv0.style.height = height+'px'; 
+		}
+		show4();
+	</script>
+</div>
+</body>
+</html>
